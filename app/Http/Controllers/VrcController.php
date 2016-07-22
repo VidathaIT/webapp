@@ -19,4 +19,9 @@ class VrcController extends Controller
     	
     	return view('vrc.show',compact('vrc'));
     }
+
+    public function edit(vrc $vrc){
+    	
+    	return view('vrc.edit',compact('vrc'));
+    }
 }

@@ -25,9 +25,8 @@
                           <dd>{{$vrc->fax}}</dd>
                     </dl>
 
-                    <button>
-                        
-                    </button>
+                    <a href="/vrc" class="btn btn-primary active" role="button">Go Back</a>
+                    <a href="/vrc/{{$vrc->id}}/edit" class="btn btn-primary " role="button">Edit</a>
                 </div>
             </div>
         </div>
