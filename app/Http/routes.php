@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('vrc','VrcController@home');
+Route::get('vrc/{vrc}','VrcController@show');
+
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
