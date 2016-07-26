@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\vrc;
+use App\BuildingTyp;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -21,7 +22,16 @@ class VrcController extends Controller
     }
 
     public function edit(vrc $vrc){
-    	
-    	return view('vrc.edit',compact('vrc'));
+
+        $buld=BuildingTyp::all();
+    	return view('vrc.edit',compact('vrc','buld'));
+    }
+
+    public function update(Request $request,vrc $vrc){
+        
+      // $vrc->update($request->all());
+        
+        return $vrc;
+        
     }
 }

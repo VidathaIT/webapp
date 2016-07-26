@@ -19,6 +19,8 @@ Route::get('vrc','VrcController@home');
 Route::get('vrc/{vrc}','VrcController@show');
 Route::get('vrc/{vrc}/edit','VrcController@edit');
 
+Route::patch('vrc/{vrc}','VrcController@update');
+
 
 Route::auth();
 

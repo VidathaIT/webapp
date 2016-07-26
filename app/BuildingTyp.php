@@ -10,6 +10,6 @@ class BuildingTyp extends Model
 
     public function vrc() 
     {
-    	return $this->hasMany(vrc::class);
+    	return $this->hasMany('App\vrc');
     }
 }

@@ -10,6 +10,8 @@ class vrc extends Model
 
     public function buildingTyp()
     {
-    	return $this->belongsTo(BuildingTyp::class);
+    	return $this->belongsTo('App\BuildingTyp');
     }
+
+    protected $fillable = array('email', 'building_status', 'tele','fax');
 }
