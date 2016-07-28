@@ -31,7 +31,7 @@ class VrcController extends Controller
         
       // $vrc->update($request->all());
         
-        return $vrc;
+        return $request->all();
         
     }
 }
