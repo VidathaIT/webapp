@@ -29,9 +29,22 @@ class VrcController extends Controller
 
     public function update(Request $request,vrc $vrc){
         
-      // $vrc->update($request->all());
+     
+        $this->validate($request, [
+        'email' => 'required|email',
+        'tele' => 'required|numeric',
+        'fax' => 'numeric',
+        ]);
+
+      //  $vrc->email=$request->email;
+       // $vrc->tele=$request->tele;
+       // $vrc->fax=$request->fax;
+      //  $vrc->building_status=$request->building_status;
+       // $vrc->save();
+
+          $vrc->update($request->all());
         
-        return $request->all();
+        return back();
         
     }
 }

@@ -14,4 +14,6 @@ class vrc extends Model
     }
 
     protected $fillable = array('email', 'building_status', 'tele','fax');
+
+    
 }
