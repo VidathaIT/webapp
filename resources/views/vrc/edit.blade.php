@@ -36,7 +36,7 @@
                   <div class="form-group{{ $errors->has('fax') ? ' has-error' : '' }}">
                   <label for="fax" class="col-sm-2 control-label">Fax</label>
                           <div class="col-sm-10">
-                            <input type="number" name="fax" class="form-control" id="fax" placeholder="Fax" value="{{$vrc->fax}} or old('fax')">
+                            <input type="number" name="fax" class="form-control" id="fax" placeholder="Fax" value="{{$vrc->fax or old('fax')}}">
                             @if ($errors->has('fax'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('fax') }}</strong>
@@ -47,9 +47,9 @@
                   <div class="form-group">
                   <label for="building_status" class="col-sm-2 control-label">Building Type</label>
                           <div class="col-sm-10">
-                            <select class="form-control" id="building_status" name="building_status">
+                            <select class="form-control" id="buildingtyp_id" name="buildingtyp_id">
                             @foreach($buld as $b)
-                              <option value="{{$b->id}}" {{ $b->id == $vrc->building_status ? 'selected="selected"' : '' }}>{{$b->type}}</option>
+                              <option value="{{$b->id}}" {{ $b->id == $vrc->buildingtyp_id ? 'selected="selected"' : '' }}>{{$b->type}}</option>
                             @endforeach
                             </select>
                           </div>

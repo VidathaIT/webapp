@@ -16,18 +16,18 @@ class VrcController extends Controller
     	return view('vrc.home',compact('vrc'));
     }
 
-     public function show(vrc $vrc){
+     public function show(Vrc $vrc){
     	
     	return view('vrc.show',compact('vrc'));
     }
 
     public function edit(vrc $vrc){
 
-        $buld=BuildingTyp::all();
+        $buld=Buildingtyp::all();
     	return view('vrc.edit',compact('vrc','buld'));
     }
 
-    public function update(Request $request,vrc $vrc){
+    public function update(Request $request,Vrc $vrc){
         
      
         $this->validate($request, [
@@ -42,9 +42,10 @@ class VrcController extends Controller
       //  $vrc->building_status=$request->building_status;
        // $vrc->save();
 
-          $vrc->update($request->all());
+       $vrc->update($request->all());
         
-        return back();
-        
-    }
+        return redirect()->action('VrcController@show',[$vrc]);
+       
+      }
 }
+ 

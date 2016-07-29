@@ -16,7 +16,7 @@
                           <dt>Dstrict</dt>
                           <dd>{{$vrc->district}}</dd>
                           <dt>Building</dt>
-                          <dd>{{$vrc->building_status}}</dd>
+                          <dd>{{$vrc->buildingtyp->type}}</dd>
                           <dt>E-mail</dt>
                           <dd>{{$vrc->email}}</dd>
                           <dt>Telphone</dt>

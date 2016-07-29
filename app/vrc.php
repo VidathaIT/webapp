@@ -4,13 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class vrc extends Model
+class Vrc extends Model
 {
-    protected $table = 'vrc_mst';
-
-    public function buildingTyp()
+   
+    public function buildingtyp()
     {
-    	return $this->belongsTo('App\BuildingTyp');
+    	return $this->belongsTo('App\Buildingtyp');
     }
 
     protected $fillable = array('email', 'building_status', 'tele','fax');

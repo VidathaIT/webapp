@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BuildingTyp extends Model
+class Buildingtyp extends Model
 {
-    protected $table = 'building_type_ref';
-
+    
     public function vrc() 
     {
-    	return $this->hasMany('App\vrc');
+    	return $this->hasMany('App\Vrc');
     }
 }
