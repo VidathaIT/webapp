@@ -10,15 +10,25 @@ use App\Http\Requests;
 
 class VrcController extends Controller
 {
-    //
+     public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['home']]);
+    }
+
+
+
     public function home(){
     	$vrc=vrc::all()->where('active', 1);
     	return view('vrc.home',compact('vrc'));
     }
 
      public function show(Vrc $vrc){
+     
+    
+      return view('vrc.show',compact('vrc'));
+     
     	
-    	return view('vrc.show',compact('vrc'));
+      
     }
 
     public function edit(vrc $vrc){

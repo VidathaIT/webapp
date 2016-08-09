@@ -16,7 +16,11 @@
                           <dt>Dstrict</dt>
                           <dd>{{$vrc->district}}</dd>
                           <dt>Building</dt>
+                          @if ($vrc->buildingtyp=="")
+                          <dd> </dd>
+                          @else
                           <dd>{{$vrc->buildingtyp->type}}</dd>
+                          @endif
                           <dt>E-mail</dt>
                           <dd>{{$vrc->email}}</dd>
                           <dt>Telphone</dt>
