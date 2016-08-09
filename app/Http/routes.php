@@ -18,9 +18,9 @@ Route::get('/', function () {
 Route::get('vrc','VrcController@home');
 Route::get('vrc/{vrc}','VrcController@show');
 Route::get('vrc/{vrc}/edit','VrcController@edit');
-
 Route::post('vrc/{vrc}','VrcController@update');
 
+Route::get('employee','EmoplyeeController@home');
 
 Route::auth();
 
