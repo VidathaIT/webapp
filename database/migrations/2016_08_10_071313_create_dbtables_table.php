@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAcsessTable extends Migration
+class CreateDbtablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,12 @@ class CreateAcsessTable extends Migration
      */
     public function up()
     {
-        Schema::create('accsess', function (Blueprint $table) {
+        Schema::create('dbtables', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('vrc_id');
-            $table->integer('table_id');
-            $table->integer('permission');  // 0 no permit 1 view 2 edit
+            $table->string('name');
+            $table->string('discripton');
             $table->timestamps();
-        }); 
+        });
     }
 
     /**
@@ -29,6 +27,6 @@ class CreateAcsessTable extends Migration
      */
     public function down()
     {
-        Schema::drop('accsess');
+        Schema::drop('dbtables');
     }
 }
